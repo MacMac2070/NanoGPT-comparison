@@ -1,0 +1,9 @@
+files/input.txt
+*.txt
+checkpoints/
+*.pt
+__pycache__/
+*.pyc
+*.model
+Harrypotter*.pdf
+Attention*.pdf
