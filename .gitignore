@@ -1,9 +1,29 @@
-files/input.txt
-*.txt
-checkpoints/
-*.pt
+# ---- macOS ----
+.DS_Store
+
+# ---- Python ----
 __pycache__/
 *.pyc
-*.model
+.venv/
+.env
+
+# ---- Scratch ----
+_to_delete/
+
+# ---- Training corpus ----
+# The Harry Potter text is copyrighted and is not redistributed here.
+# See the README for how to supply your own corpus.
+input.txt
 Harrypotter*.pdf
 Attention*.pdf
+
+# ---- Trained model weights ----
+# Checkpoints are 42-246 MB each; GitHub rejects files over 100 MB.
+*.pt
+checkpoints/
+*.model
+
+# ---- Third-party reference code ----
+# Karpathy's nanoGPT and gpt_dev.py are linked in the README, not vendored.
+paper_gpt_3/Karpathy nanogpt/
+paper_gpt_3/gpt_dev.py

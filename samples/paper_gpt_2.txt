@@ -1,0 +1,7 @@
+paper_gpt_2 - byte-level BPE, 21,462,016 parameters
+command: python generate.py --prompt "Harry looked at" --max_new_tokens 300 --temperature 0.8 --top_k 20
+300 BPE tokens generated, which at 3.92 characters per token is roughly the same
+amount of text as 1200 characters from the character models.
+--------------------------------------------------------------------------------
+
+Harry looked at Mrs. Weasley. He seemed to be trying to think of a good-bye to him; the others were now accompanied by the others, a gift from their daughter's deaths and their consequences. Harry and Ron made their way off along the platform, so they went down to a changing room, where they were heading, and onto the luggage rack, which Mrs. Weasley had squeezed itself so that they could keep themselves shut. Once they were safely in the yards of the lantern-lit, Harry took a right turn, and walked through the gateway and tank. He wouldn't like them at all. In fact, it had been a nightmare, there were many-looking wizards. "You'd better hurry up, then," Mrs. Weasley said, mopping her eyes with her sleeve. "I'm going to go up and ask the Floo powder. Now get going to that quickly, we're going to be able to look for them." Harry had a fleeting rasp of the car carpet, which was so full of traffic. "Come on — there — and get another —" The lock clicked and they turned into a corner. "Let's stay here!" came Tonks in. Harry and Lupin led them forward through the dark, paces, while the door on the right was a few feet away. "Come on, there!"

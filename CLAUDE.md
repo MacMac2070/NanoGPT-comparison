@@ -1,10 +1,26 @@
 # nanoGPT build - project notes for Claude Code
 
 ## What this project is
-Building a small decoder-only GPT from scratch in PyTorch, following Karpathy's
-"Let's build GPT" video. The goal is LEARNING, not just a working model. First
-train on tinyshakespeare to match Karpathy's loss numbers, then swap in a cleaned
-Harry Potter `input.txt` (char-level, vocab ~82).
+Three small decoder-only GPTs written from scratch in PyTorch, trained on the
+same cleaned Harry Potter `input.txt`. The goal is LEARNING, not just a working
+model. The three do not share a source, and that distinction matters:
+
+- `paper_gpt_1` and `paper_gpt_2` are written from "Attention Is All You Need"
+  (Vaswani et al. 2017), following the base model of Table 3 as closely as a
+  decoder-only setup on one book allows: d_model 512, N 6, h 8, d_ff 2048,
+  P_drop 0.1, sinusoidal positions, ReLU, post-norm, Noam warmup. They share a
+  byte-identical `model.py`. gpt_2 differs from gpt_1 only in using a byte-level
+  BPE tokenizer with `bpe_vocab_size` set to 5000; gpt_1 is character-level
+  (vocab ~82, built from the corpus, never hardcoded).
+- `paper_gpt_3/char_gpt` is written from Karpathy's "Let's build GPT" video.
+  The concepts come from the video and the code was typed out by hand rather
+  than copied, so it is not line for line with his. It uses the post-2017
+  conventions the video teaches: learned position embeddings, pre-norm blocks,
+  GELU, and fused QKV. Where it touches the paper, it reached it through the
+  video.
+
+Never work from `karpathy/nanoGPT` or any other finished reference
+implementation.
 
 ## Two modes - do not mix them up
 
@@ -32,3 +48,5 @@ their own - then offer to have `transformer-tutor` walk through the differences.
 ## Defaults
 - Assume learning mode unless the user says "one-shot" or "just build it".
 - British spelling, no em dashes in prose.
+- Keep the two sources straight. Do not describe gpt_3 as written from the
+  paper, and do not describe gpt_1 or gpt_2 as following the video.
